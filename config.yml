@@ -1,0 +1,7 @@
+# Don't edit this. IceSkate
+enabled: true
+speed: 0.25
+#downblock
+downblock: 79
+#skate
+skate: 309

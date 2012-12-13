@@ -1,0 +1,15 @@
+name: skate
+main: net.kgab0r.skate.skate
+version: 1.0
+author: kgab0r
+website: http://kgab0r.net/
+database: false
+
+commands:
+  is:
+    description: IceSkate.
+    permission: iceskate.op
+ 
+permissions:
+    iceskate.skate:
+        description: Allow skate on ice
