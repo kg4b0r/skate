@@ -30,16 +30,20 @@ public final class skate extends JavaPlugin {
 			// goon
 			Material downblock = Material.getMaterial(getConfig().getInt("downblock"));
 			Material skate = Material.getMaterial(getConfig().getInt("skate"));
+			Boolean allblock = getConfig().getBoolean("allblock");
 			
 			//passtoel
 			eventListener.down = downblock;
 			eventListener.skate = skate;
+			eventListener.allblock = allblock;
 			
 			//echo
-			getLogger().info("DownBlock set to: "+downblock);
-			getLogger().info("Skate set to: "+skate);
-			
-			 
+			if (allblock){
+				getLogger().info("DownBlock set to: ALLBLOCK");
+			}else{
+				getLogger().info("DownBlock set to: "+downblock);
+			}
+			getLogger().info("Skate set to: "+skate);			 
 }else{
 	this.setEnabled(false);
 }

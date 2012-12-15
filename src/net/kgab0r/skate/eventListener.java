@@ -15,6 +15,7 @@ public class eventListener implements Listener{
 	Location from, to;
 	public static Material down,skate;
 	public static String ws;
+	public static Boolean allblock = false;
 	public eventListener(skate plugin){
 		this.plug = plugin;
 		plug.getServer().getPluginManager().registerEvents(this, plugin);
@@ -28,7 +29,7 @@ public class eventListener implements Listener{
 		loc.setY(loc.getY()-1);
 		Block b = loc.getBlock();
 		
-		loc.setY(loc.getY()-2);
+		loc.setY(loc.getY()-1.8d);
 		Block b2 = loc.getBlock();
 		Material mat2 = b2.getType(); 
 		
@@ -41,6 +42,12 @@ public class eventListener implements Listener{
 		}
 		Material mat = b.getType();
 
+		//if all block than we dont care with the block
+		if(allblock){
+			if(btype==skate){
+				player.setWalkSpeed(Float.parseFloat(ws)); //BUG
+			}
+		}else{
 		if(btype==skate){
 			if(mat==Material.AIR && mat2 == down){
 				player.setWalkSpeed(Float.parseFloat(ws)); //BUG
@@ -51,6 +58,8 @@ public class eventListener implements Listener{
 				player.setWalkSpeed((float) 0.2);
 			}
 		}
-		}}
+		}
+		}
+		}
 	
 }

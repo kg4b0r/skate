@@ -1,7 +1,9 @@
-# Don't edit this. IceSkate
+# IceSkate dev by kgab0r
 enabled: true
 speed: 0.25
-#downblock
+# downblock id
 downblock: 79
-#skate
+# skate id
 skate: 309
+# if you want use to all black then set it true
+allblock: false
